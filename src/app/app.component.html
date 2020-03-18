@@ -1,0 +1,16 @@
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <GridLayout tkDrawerContent rows="56, *" class="sideStackLayout">
+        <StackLayout class="sideTitleStackLayout">
+            <Label text="Navigation Menu"></Label>
+        </StackLayout>
+        <ScrollView row="1">
+            <StackLayout class="sideStackLayout">
+                <Label text="Main page" [nsRouterLink]="['/main']" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Photos view" [nsRouterLink]="['/view-page']" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Close Drawer" color="lightgray" padding="10" style="text-align: center" (tap)="onCloseDrawerTap()"></Label>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
+    <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>

@@ -1,0 +1,23 @@
+.labeltitle {
+    text-align:left;
+    background-color: aquamarine;
+    padding: 15;
+    font-size: 20;
+}
+
+.labeltext{
+    font-size: 16;
+    color: black;
+    left: 10%;
+}
+
+.imagepreview{
+    border: 1% solid black;
+    padding: 15;
+
+}
+
+.overflow{
+    overflow-y: scroll;
+	
+}

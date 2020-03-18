@@ -1,0 +1,31 @@
+<ActionBar title="Photo details">
+    <Actionitem text="Back" android.position="left" [nsRouterLink]="['/main']"></Actionitem>
+</ActionBar>
+<StackLayout class="overflow">
+
+    <StackLayout>
+        <Label text="ID" class="labeltitle"></Label>
+        <Label text="{{ photo.id }}" class="labeltext"></Label>
+    </StackLayout>
+    <StackLayout>
+        <Label text="TITLE" class="labeltitle"></Label>
+        <Label text="{{ photo.title }}" class="labeltext"></Label>
+    </StackLayout>
+     <StackLayout>
+        <Label text="DESCRIPTION" class="labeltitle"></Label>
+        <Label text="{{ photo.description }}" class="labeltext"></Label>
+    </StackLayout>
+     <StackLayout>
+        <Label text="TIME" class="labeltitle"></Label>
+        <Label text="{{ photo.time }}" class="labeltext"></Label>
+    </StackLayout>
+     <StackLayout>
+        <Label text="DATE" class="labeltitle"></Label>
+        <Label text="{{ photo.date }}" class="labeltext"></Label>
+    </StackLayout>
+   <StackLayout>
+        <Label text="PREVIEW" class="labeltitle"></Label>
+        <Image src="{{ image }}" class="imagepreview"></Image>
+   </StackLayout>
+
+ </StackLayout>

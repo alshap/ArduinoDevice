@@ -1,0 +1,36 @@
+<ScrollView>
+    <GridLayout rows="auto, *, auto, auto">
+        <StackLayout row="0" orientation="vertical" padding="10">
+            <StackLayout orientation="horizontal" padding="10">
+                <Label text="saveToGallery"></Label>
+                <Switch [(ngModel)]="saveToGallery"></Switch>
+            </StackLayout>
+            <StackLayout android:visibility="collapsed" orientation="horizontal" padding="10">
+                <Label text="allowsEditing"></Label>
+                <Switch [(ngModel)]="allowsEditing"></Switch>
+            </StackLayout>
+            <StackLayout orientation="horizontal" padding="10">
+                <Label text="keepAspectRatio"></Label>
+                <Switch [(ngModel)]="keepAspectRatio"></Switch>
+            </StackLayout>
+            <StackLayout orientation="vertical" padding="10">
+                <Label text="Title: "></Label>
+                <TextField hint="Enter title" [(ngModel)]="img_title" class="input" (textChange)="onTitleChanged($event)"></TextField>
+                <Label text="Description: "></Label>
+                <TextField hint="Enter description" [(ngModel)]="img_description" class="input" (textChange)="onDescriptionChanged($event)"></TextField>
+            </StackLayout>
+            <StackLayout orientation="horizontal" padding="10">
+                <Label text="width: "></Label>
+                <TextField hint="Enter width" keyboardType="number" [(ngModel)]="width" class="input"></TextField>
+                <Label text="height: "></Label>
+                <TextField hint="Enter height" keyboardType="number" [(ngModel)]="height" class="input"></TextField>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout row="1" orientation="vertical" padding="10">
+            <Image [src]="cameraImage" stretch="aspectFit" margin="10"></Image>
+            <TextView [(ngModel)]="labelText" editable="false"></TextView>>
+            <Button text="Take Picture" (tap)='onTakePictureTap($event)' padding="10" class="btn main"></Button>
+            <Button text="Save image" (tap)='saveImage()' [nsRouterLink]="['/view-page']" padding="10" class="btn main"></Button>
+        </StackLayout>
+    </GridLayout>
+</ScrollView>

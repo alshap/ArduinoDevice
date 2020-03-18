@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "330504440605",
+    "firebase_url": "https://imgrec-mob-storage.firebaseio.com",
+    "project_id": "imgrec-mob-storage",
+    "storage_bucket": "imgrec-mob-storage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330504440605:android:320089e12588c05580eff4",
+        "android_client_info": {
+          "package_name": "com.taltech.ArduinoDevice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330504440605-aal36br7kfgr2omn2gkgidl3m9kr65p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtXfuLe3k28jKcozi2qI6_N59elzx_c9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330504440605-aal36br7kfgr2omn2gkgidl3m9kr65p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
