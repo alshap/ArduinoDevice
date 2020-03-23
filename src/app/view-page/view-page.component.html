@@ -1,0 +1,21 @@
+<ActionBar title="Photos view">
+    <Actionitem text="Menu" android.position="left" (tap)="onDrawerButtonTap()"></Actionitem>
+</ActionBar>
+<StackLayout>
+    <ListPicker [items]="listSelect" selectedIndex="0" (selectedIndexChange)="onSelectedIndexChanged($event)"></ListPicker>
+    <ListView [items]="SQLitephotos" *ngIf="isListLocal" class="list-height">
+        <ng-template let-SQLitephoto="item">
+            <Label text="{{ SQLitephoto.title }} {{ SQLitephoto.id }}"
+                (tap)="navigateToDetail(SQLitephoto.id, SQLitephoto.title, SQLitephoto.description, SQLitephoto.img, SQLitephoto.date, SQLitephoto.time)" padding="12">
+            </Label>
+        </ng-template>
+    </ListView>
+    <ListView [items]="firebasephotos" *ngIf="!isListLocal" class="list-height">
+        <ng-template let-firebasephoto="item">
+            <Label text="{{ firebasephoto.title }} {{ firebasephoto.id }}" [nsRouterLink]="['/item-details', firebasephoto.img]" padding="12"></Label>
+        </ng-template>
+    </ListView>
+    <Button text="Add photo to local storage" *ngIf="isListLocal" [nsRouterLink]="['/new-record']" class="btn main-margin"></Button>
+    <!--<Button text="Export entire firebase" *ngIf="isListLocal" (tap)="exportPhotosToFirebase()" class="btn main-margin"></Button>-->
+    <Button text="Erase database" *ngIf="isListLocal" (tap)="deletePhotos()" class="btn main-margin"></Button>
+</StackLayout>
