@@ -1,14 +1,23 @@
 <ActionBar title="">
     <Actionitem text="Back" android.position="left" [nsRouterLink]="['/main']"></Actionitem>
 </ActionBar>
-<MLKitObjectDetection
-    width="100%"
-    height="100%"
-    classify="true"
-    multiple="true"
-    processEveryNthFrame="20"
-    preferFrontCamera="false"
-    [torchOn]="torchOn"
-    (scanResult)="onObjectDetectionResult($event)">
-</MLKitObjectDetection>
+<GridLayout>
+
+    <MLKitObjectDetection
+        width="100%"
+        height="99%"
+        classify="true"
+        multiple="false"
+        processEveryNthFrame="20"
+        preferFrontCamera="false"
+        (scanResult)="onObjectDetectionResult($event)">
+    </MLKitObjectDetection>
+
+    <StackLayout>
+       
+        <!--<WebView src="{{ htmlString }}"></WebView>-->
+        <Label style="{{ labelStyle }}"></Label>
+    </StackLayout>
+
+</GridLayout>
   
